@@ -10,6 +10,7 @@ gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'coffee-rails', '~> 4.2' # Use CoffeeScript for .coffee assets and views
 gem 'devise' # Authentication
 gem 'atrium-ruby' # Retrieve banking data for users
+gem 'figaro' # Manage environment variables
 
 # gem 'therubyracer', platforms: :ruby # See https://github.com/rails/execjs#readme for more supported runtimes
 
