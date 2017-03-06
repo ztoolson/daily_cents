@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
 
-  resources :institutions, only: [:index]
+  authenticate :user do
+    resources :institutions, only: [:index]
+    resource :connect_widget_url, only: [:show]
+  end
 end
