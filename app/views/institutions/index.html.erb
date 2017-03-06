@@ -1,0 +1,11 @@
+<h1>Institutions... so hot right now</h1>
+
+<% if @institutions.empty? %>
+  No institutions brolo.
+<% else %>
+  <ul>
+    <% @institutions.each do |institution| %>
+      <li><%= institution.name %></li>
+    <% end %>
+  </ul>
+<% end %>
