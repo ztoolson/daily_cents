@@ -1,43 +1,6 @@
 <% if @accounts %>
-  <p> TODO render some accounts <p>
+  TODO render some accounts
 <% else %>
-  <button onclick="loadConnectWidget()">
-    Add some accounts
-  </button>
-
-  <div id="addAccount">
-  </div>
-
-  <%= javascript_tag do %>
-    function loadConnectWidget() {
-      $.ajax('/connect_widget_url', {
-        success: function (data) {
-          buildConnectWidget(data);
-          console.log(data);
-        }
-      });
-    }
-
-    function buildConnectWidget(url) {
-			var mxConnect = new MXConnect({
-				id: 'addAccount',
-				isMobileWebView: false,
-				url: url,
-				onLoad: function () {
-					// Add accounts widget successfully loaded
-					console.log('On Load');
-				},
-				onSuccess: function () {
-					// Account added successfully
-					console.log('On Success');
-				}
-			});
-
-      console.log("hello before");
-      debugger;
-      mxConnect.load();
-      console.log("hello after");
-    }
-  <% end %>
+  TODO: list some accounts that have been aggregated
 <% end %>
 

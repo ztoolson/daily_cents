@@ -1,17 +1,35 @@
 <div class="container-fluid">
-	<div class="row">
+  <div class="row">
     <div class="col-sm-3 col-lg-2">
       <nav class="navbar navbar-default navbar-fixed-side">
         <ul class="nav sidebar-nav">
+          <li><%= link_to "Daily Cents", '#' %></li>
           <li><%= link_to "Institutions", institutions_path %></li>
-          <li><%= link_to "Accounts", '#' %></li>
+          <li><%= link_to "Accounts", accounts_path %></li>
           <li><%= link_to "Transactions", '#' %></li>
-          <li><%= link_to "Daily Spending", '#' %></li>
         </ul>
       </nav>
     </div>
     <div class="col-sm-9 col-lg-10">
-			<%= yield %>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" onclick="loadConnectWidget()">
+        Add Accounts
+      </button>
+      <%= yield %>
     </div>
-	</div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Accounts</h4>
+      </div>
+      <div class="modal-body">
+        <div id="addAccount"></div>
+      </div>
+    </div>
+  </div>
 </div>
