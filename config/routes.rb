@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   authenticate :user do
     resources :institutions, only: [:index]
     resource :connect_widget_url, only: [:show]
+    resources :accounts, only: [:index]
   end
 end
