@@ -18,7 +18,11 @@
 				<div class="alert alert-<%= key %>"><%= value %></div>
 			<% end %>
 
-			<%= yield %>
+      <% if current_user %>
+        <%= render 'layouts/sidebar_page' %>
+      <% else %>
+        <%= yield %>
+      <% end %>
       <%= render 'layouts/footer' %>
     </div>
   </body>

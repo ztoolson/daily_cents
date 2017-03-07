@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-sm-3 col-lg-2">
+      <nav class="navbar navbar-default navbar-fixed-side">
+        <ul class="nav sidebar-nav">
+          <li><%= link_to "Institutions", institutions_path %></li>
+          <li><%= link_to "Accounts", '#' %></li>
+          <li><%= link_to "Transactions", '#' %></li>
+          <li><%= link_to "Daily Spending", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-sm-9 col-lg-10">
+			<%= yield %>
+    </div>
+	</div>
+</div>
