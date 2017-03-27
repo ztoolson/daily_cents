@@ -10,10 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170306223037) do
+ActiveRecord::Schema.define(version: 20170327170753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accounts", force: :cascade do |t|
+    t.decimal "apr", precision: 10, scale: 6
+    t.decimal "apy", precision: 10, scale: 6
+    t.text "account_number"
+    t.decimal "available_balance", precision: 14, scale: 2
+    t.decimal "available_credit"
+    t.decimal "balance", precision: 14, scale: 2
+    t.decimal "credit_limit", precision: 10, scale: 2
+    t.integer "day_payment_is_due"
+    t.text "guid"
+    t.text "institution_code"
+    t.decimal "interest_rate", precision: 10, scale: 6
+    t.boolean "is_closed"
+    t.decimal "last_payment", precision: 10, scale: 6
+    t.datetime "last_payment_at"
+    t.datetime "matures_on"
+    t.text "member_guid"
+    t.decimal "minimum_balance", precision: 14, scale: 2
+    t.decimal "minimum_payment", precision: 10, scale: 2
+    t.text "name"
+    t.decimal "original_balance", precision: 10, scale: 2
+    t.datetime "payment_due_at"
+    t.decimal "payoff_balance", precision: 10, scale: 2
+    t.text "routing_number"
+    t.datetime "started_on"
+    t.text "subtype"
+    t.decimal "total_account_value", precision: 14, scale: 2
+    t.text "type"
+    t.text "user_guid"
+    t.datetime "atrium_created_at"
+    t.datetime "atrium_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
