@@ -12,6 +12,7 @@ gem 'devise' # Authentication
 gem 'atrium-ruby' # Retrieve banking data for users
 gem 'figaro' # Manage environment variables
 gem 'sidekiq' # Background workers
+gem 'activerecord-import' # Bulk inserting data using ActiveRecord
 
 # gem 'therubyracer', platforms: :ruby # See https://github.com/rails/execjs#readme for more supported runtimes
 
