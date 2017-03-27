@@ -1,5 +1,5 @@
 class Account < ApplicationRecord
-  def initialize_from_atrium_record(atrium_record)
+  def self.initialize_from_atrium_record(atrium_record)
     self.new(
       :apr => atrium_record.apr,
       :apy => atrium_record.apy,
