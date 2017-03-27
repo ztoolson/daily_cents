@@ -20,9 +20,9 @@ class CreateAccounts < ActiveRecord::Migration[5.1]
       t.decimal :minimum_balance, precision: 14, scale: 2
       t.decimal :minimum_payment, precision: 10, scale: 2
       t.text :name
-      t.decimal :original_balance, precision: 10, scale: 2
+      t.decimal :original_balance, precision: 14, scale: 2
       t.datetime :payment_due_at
-      t.decimal :payoff_balance, precision: 10, scale: 2
+      t.decimal :payoff_balance, precision: 14, scale: 2
       t.text :routing_number
       t.datetime :started_on
       t.text :subtype
