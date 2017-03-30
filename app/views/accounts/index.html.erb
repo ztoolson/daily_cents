@@ -1,10 +1,22 @@
 <% if @accounts %>
-  <ul>
-    <% @accounts.each do |account| %>
-      <li><%= account.name %> | <%= account.balance %></li>
-    <% end %>
-  </ul>
+  <div class="container"</div>
+    <table class="table table-responsive table-condensed">
+      <thead>
+        <th>Account Name</th>
+        <th>Available Balance</th>
+      </thead>
+      <tbody>
+        <% @accounts.each do |account| %>
+          <tr>
+            <td><%= link_to(account.name, account) %></td>
+            <td><%= number_to_currency(account.available_balance) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+
 <% else %>
-  TODO: list some accounts that have been aggregated
+  Adds some accounts!
 <% end %>
 

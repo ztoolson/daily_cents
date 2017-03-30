@@ -1,0 +1,7 @@
+<h1><%= @account.name %></h1>
+
+<ul>
+  <% @account.attributes.each do |attribute, value| %>
+    <li><%= attribute %>: <%= value %></li>
+  <% end %>
+</ul>
