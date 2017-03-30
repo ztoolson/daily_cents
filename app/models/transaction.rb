@@ -1,4 +1,6 @@
 class Transaction < ApplicationRecord
+  belongs_to :account
+
   def self.initialize_from_atrium_record(atrium_record)
     self.new(
       :account_guid => atrium_record.account_guid,

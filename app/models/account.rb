@@ -1,4 +1,8 @@
 class Account < ApplicationRecord
+
+  belongs_to :user
+  has_many :transactions
+
   def self.initialize_from_atrium_record(atrium_record)
     self.new(
       :apr => atrium_record.apr,

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :accounts
+
   # Include default devise modules. Others available are:
   # :confirmable, # require a user to confirm their email address by clicking a link in a confirmation email before they can sign in
   # :lockable, # proves extra security by automatically locking accounts after a giver number of failed sign in attempts
