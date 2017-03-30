@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :accounts
+  has_many :accounts, primary_key: 'guid', foreign_key: 'user_guid'
 
   # Include default devise modules. Others available are:
   # :confirmable, # require a user to confirm their email address by clicking a link in a confirmation email before they can sign in

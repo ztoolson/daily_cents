@@ -1,5 +1,5 @@
 class Transaction < ApplicationRecord
-  belongs_to :account
+  belongs_to :account, primary_key: 'guid', foreign_key: 'account_guid'
 
   def self.initialize_from_atrium_record(atrium_record)
     self.new(

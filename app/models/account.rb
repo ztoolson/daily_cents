@@ -1,7 +1,7 @@
 class Account < ApplicationRecord
 
-  belongs_to :user
-  has_many :transactions
+  belongs_to :user, primary_key: 'guid', foreign_key: 'user_guid'
+  has_many :transactions, primary_key: 'guid', foreign_key: 'account_guid'
 
   def self.initialize_from_atrium_record(atrium_record)
     self.new(
