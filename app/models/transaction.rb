@@ -22,7 +22,7 @@ class Transaction < ApplicationRecord
     status: :status,
     top_level_category: :top_level_category,
     transacted_at: :transacted_at,
-    type: :type,
+    transaction_type: :type,
     user_guid: :user_guid,
     atrium_created_at: :created_at,
     atrium_updated_at: :updated_at,

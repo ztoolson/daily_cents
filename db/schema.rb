@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327172300) do
+ActiveRecord::Schema.define(version: 20170330214403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20170327172300) do
     t.text "status"
     t.text "top_level_category"
     t.datetime "transacted_at"
-    t.text "type"
+    t.text "transaction_type"
     t.text "user_guid"
     t.datetime "atrium_created_at"
     t.datetime "atrium_updated_at"

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :institutions, only: [:index]
     resource :connect_widget_url, only: [:show]
     resources :accounts, only: [:index, :show]
+    resources :daily_cents, only: [:index]
     post "harvest_aggregated_data/:member_guid", to: 'harvest_aggregated_data#perform'
   end
 end
