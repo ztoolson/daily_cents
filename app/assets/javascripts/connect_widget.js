@@ -18,13 +18,10 @@ function buildConnectWidget(url) {
     onSuccess: function (guids) {
       // Account added successfully
       console.log('On Success');
-      console.log(guids.member_guid);
-      console.log(guids.user_guid);
-// TODO: after member is added, got harvest the data
-//      $.ajax({
-//        method: "POST",
-//        url: "/harvest_aggregated_data" + guids.member_guid
-//      });
+      $.ajax({
+        method: "POST",
+        url: "/harvest_aggregated_data/" + guids.member_guid
+      });
     }
   });
 

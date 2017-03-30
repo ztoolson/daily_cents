@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.1.0.beta1' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '5.1.0.rc1' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'pg', '~> 0.18' # Use postgresql as the database for Active Record
 gem 'puma', '~> 3.0' # Use Puma as the app server
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
@@ -11,6 +11,8 @@ gem 'coffee-rails', '~> 4.2' # Use CoffeeScript for .coffee assets and views
 gem 'devise' # Authentication
 gem 'atrium-ruby' # Retrieve banking data for users
 gem 'figaro' # Manage environment variables
+gem 'sidekiq' # Background workers
+gem 'activerecord-import' # Bulk inserting data using ActiveRecord
 
 # gem 'therubyracer', platforms: :ruby # See https://github.com/rails/execjs#readme for more supported runtimes
 

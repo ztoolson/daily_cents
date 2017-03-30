@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
   def index
-    @accounts = nil
+    @accounts = ::Account.where(user_guid: current_user.user_guid)
   end
 end

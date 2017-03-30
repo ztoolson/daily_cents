@@ -8,11 +8,11 @@ class ApplicationController < ActionController::Base
   def ensure_atrium_user_created
     return if current_user&.user_guid
 
-    puts "*" * 90
     begin
       atrium_user = ::Atrium::User.create(identifier: current_user.id, metadata: nil, is_disabled: false)
       current_user.update_attributes(user_guid: atrium_user.guid)
     rescue
+      logger.debug "user does not have a user guid and cannot be created in atrium: #{current_user.inspect}"
     end
   end
 end

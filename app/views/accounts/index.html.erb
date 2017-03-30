@@ -1,5 +1,9 @@
 <% if @accounts %>
-  TODO render some accounts
+  <ul>
+    <% @accounts.each do |account| %>
+      <li><%= account.name %> | <%= account.balance %></li>
+    <% end %>
+  </ul>
 <% else %>
   TODO: list some accounts that have been aggregated
 <% end %>
