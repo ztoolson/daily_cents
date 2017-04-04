@@ -3,7 +3,7 @@
 module Atrium
   class ConnectWidgetUrl
     def self.create_url(user_guid)
-      endpoint = "users/#{user_guid}/connect_widget_url"
+      endpoint = "/users/#{user_guid}/connect_widget_url"
       connect_widget_url_response = ::Atrium.client.make_request(:post, endpoint)
 
       connect_widget_url_keys = connect_widget_url_response['user']
